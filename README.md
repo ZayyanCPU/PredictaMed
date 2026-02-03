@@ -290,14 +290,6 @@ Contributions are welcome! Here's how you can help:
 
 ---
 
-## 📄 License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
-> **Note**: The dataset used in this project was provided for educational purposes and is not owned by the developer.
-
----
-
 <div align="center">
 
 ### ⭐ If you found this project helpful, please consider giving it a star!
