@@ -10,6 +10,7 @@
 [![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)](https://pandas.pydata.org)
 [![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)](https://numpy.org)
 [![Scikit Learn](https://img.shields.io/badge/Scikit_Learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)](https://scikit-learn.org)
+[![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://streamlit.io)
 [![Matplotlib](https://img.shields.io/badge/Matplotlib-11557c?style=for-the-badge&logo=python&logoColor=white)](https://matplotlib.org)
 [![Seaborn](https://img.shields.io/badge/Seaborn-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://seaborn.pydata.org)
 [![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white)](https://jupyter.org)
@@ -220,7 +221,7 @@ SVM                  ███████████████████�
 python --version
 
 # Required packages
-pip install pandas numpy matplotlib seaborn scikit-learn jupyter
+pip install pandas numpy matplotlib seaborn scikit-learn jupyter streamlit
 ```
 
 ### Installation
@@ -234,12 +235,46 @@ cd PredictaMed
 
 # Install dependencies
 pip install -r requirements.txt
-
-# Launch Jupyter Notebook
-jupyter notebook code.ipynb
 ```
 
 ### Usage
+
+#### 🌐 Option 1: Web Application (Recommended)
+
+Launch the interactive web interface to predict disease risks:
+
+```bash
+# Run the Streamlit web app
+streamlit run app.py
+
+# Or using Python module
+python -m streamlit run app.py
+```
+
+The app will open in your browser at `http://localhost:8501`
+
+**Web App Features:**
+- 📋 Easy-to-use sidebar form for entering patient data
+- 🔬 Real-time disease risk predictions for 6 diseases
+- 📊 Color-coded risk levels (green = low risk, red = high risk)
+- 📈 Risk probability percentages
+- 💡 Personalized health recommendations
+
+**How to Use the Web App:**
+1. Enter your personal details (age, sex, race)
+2. Input health metrics (BMI, sleep time, general health)
+3. Select lifestyle factors (smoking, alcohol, physical activity)
+4. Click **"🔍 Analyze Health Risks"** button
+5. View your personalized disease risk predictions
+
+#### 📓 Option 2: Jupyter Notebook (For Analysis)
+
+Explore the full data analysis and model training:
+
+```bash
+# Launch Jupyter Notebook
+jupyter notebook code.ipynb
+```
 
 1. **Open the notebook**: Launch `code.ipynb` in Jupyter Notebook or VS Code
 2. **Run all cells**: Execute cells sequentially to reproduce the analysis
@@ -254,6 +289,7 @@ jupyter notebook code.ipynb
 PredictaMed/
 │
 ├── 📓 code.ipynb                    # Main analysis notebook
+├── 🌐 app.py                        # Streamlit web application
 ├── 📊 Multiple Disease Data.csv     # Dataset (59,068 records)
 ├── 📖 README.md                     # Project documentation
 ├── 📜 LICENSE                       # License file
