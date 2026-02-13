@@ -172,12 +172,6 @@ export default function Home() {
               and stakeholder walkthroughs.
             </p>
             <div className="flex flex-wrap gap-4">
-              <button
-                className="rounded-full bg-[color:var(--accent)] px-7 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-white shadow-[0_12px_24px_rgba(255,122,69,0.35)] transition hover:-translate-y-0.5"
-                onClick={() => setHasRun(true)}
-              >
-                Run Demo
-              </button>
               <a
                 className="rounded-full border border-black/10 bg-white/70 px-7 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-[color:var(--foreground)] backdrop-blur transition hover:border-black/30"
                 href="https://github.com/ZayyanCPU/PredictaMed"
@@ -450,12 +444,22 @@ export default function Home() {
         <footer className="flex flex-col gap-4 text-sm text-[color:var(--muted)]">
           <div className="flex flex-wrap items-center justify-between gap-4">
             <p>PredictaMed • AI-powered multi-disease prediction UI</p>
-            <a
-              className="text-[color:var(--foreground)] underline decoration-[color:var(--accent)] decoration-2 underline-offset-4"
-              href="mailto:zayyanahmad765@gmail.com"
-            >
-              Contact
-            </a>
+            <div className="flex flex-wrap items-center gap-4">
+              <a
+                className="text-[color:var(--foreground)] underline decoration-[color:var(--accent)] decoration-2 underline-offset-4"
+                href="mailto:zayyanahmad765@gmail.com"
+              >
+                Email
+              </a>
+              <a
+                className="text-[color:var(--foreground)] underline decoration-[color:var(--accent)] decoration-2 underline-offset-4"
+                href="https://www.linkedin.com/in/zayyan-ahmad"
+                target="_blank"
+                rel="noreferrer"
+              >
+                LinkedIn
+              </a>
+            </div>
           </div>
           <p>
             This interface is a visual concept for educational purposes and does not provide
