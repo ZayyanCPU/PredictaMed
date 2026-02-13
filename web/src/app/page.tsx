@@ -23,6 +23,8 @@ type DiseaseMeta = {
   factor: number;
 };
 
+type ToggleKey = "smoker" | "activity" | "alcohol" | "diffWalking";
+
 const diseaseMeta: DiseaseMeta[] = [
   {
     id: "heart",
@@ -103,6 +105,13 @@ const labelPill =
 
 const cardClass =
   "rounded-3xl border border-black/10 bg-[color:var(--panel)] shadow-[0_20px_45px_rgba(0,0,0,0.08)]";
+
+const toggleFields: { label: string; key: ToggleKey }[] = [
+  { label: "Smoker", key: "smoker" },
+  { label: "Physical activity", key: "activity" },
+  { label: "Alcohol", key: "alcohol" },
+  { label: "Difficulty walking", key: "diffWalking" },
+];
 
 function clampRisk(value: number) {
   return Math.min(98, Math.max(2, value));
@@ -313,12 +322,7 @@ export default function Home() {
             </div>
 
             <div className="mt-6 grid gap-4 sm:grid-cols-2">
-              {[
-                { label: "Smoker", key: "smoker" },
-                { label: "Physical activity", key: "activity" },
-                { label: "Alcohol", key: "alcohol" },
-                { label: "Difficulty walking", key: "diffWalking" },
-              ].map((item) => (
+              {toggleFields.map((item) => (
                 <div key={item.key} className="flex items-center justify-between gap-3">
                   <span className="text-sm font-semibold">{item.label}</span>
                   <div className="flex gap-2">
@@ -326,7 +330,7 @@ export default function Home() {
                       <button
                         key={value}
                         className={`rounded-full px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] transition ${
-                          (form as Record<string, string>)[item.key] === value
+                          form[item.key] === value
                             ? "bg-[color:var(--accent)] text-white"
                             : "border border-black/10 bg-white/70 text-[color:var(--muted)]"
                         }`}
